@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -25,31 +26,24 @@ public class Main {
         }
         System.out.println(sum);
 
-        double elementMin = 0;
-        double minValue = Double.MAX_VALUE;
-
-        for (int i = 0; i < priceList.length; i++) {
-            elementMin = Double.parseDouble(priceList[i].replaceAll("[\\s+a-zA-Z :]", ""));
-
-            if (elementMin < minValue) {
-                minValue = elementMin;
+        boolean isSorted = false;
+        String temp;
+        while (!isSorted) {
+            isSorted = true;
+            for ( int i = 0; i < priceList.length - 1; i++) {
+                double element = Double.parseDouble(priceList[i].replaceAll("[\\s+a-zA-Z :]", ""));
+                double nextElement = Double.parseDouble(priceList[i+1].replaceAll("[\\s+a-zA-Z :]", ""));
+                if (element > nextElement){
+                    isSorted = false;
+                    temp = priceList[i];
+                    priceList[i] = priceList[i+1];
+                    priceList[i+1] = temp;
+                }
             }
+
         }
-
-        System.out.println("Min expense " + minValue);
-
-        double elementMax = 0;
-        double maxValue = Double.MIN_VALUE;
-
-        for (int i = 0; i < priceList.length; i++) {
-            elementMax = Double.parseDouble(priceList[i].replaceAll("[\\s+a-zA-Z :]", ""));
-
-            if (elementMax > maxValue) {
-                maxValue = elementMax;
-            }
-        }
-
-        System.out.println("Max expense " + maxValue);
+        System.out.println(priceList[0]);
+        System.out.println(priceList[priceList.length - 1]);
 
     }
 }
