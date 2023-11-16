@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -18,10 +17,9 @@ public class Main {
 
         for (int i = 0; i < purchasesNumber; i++) {
             String buffer = scanner.nextLine();
-            String[][] bufferParts = new String[purchasesNumber][purchasesNumber];
-            bufferParts[i] = buffer.split(" ");
-            expensesNames[i] = bufferParts[i][0];
-            costExpenses[i] = Double.parseDouble(bufferParts[i][1]);
+            String[] bufferParts = buffer.split(" ");
+            expensesNames[i] = bufferParts[0];
+            costExpenses[i] = Double.parseDouble(bufferParts[1]);
         }
         double sum = 0;
         for (int i = 0; i < costExpenses.length; i++) {
