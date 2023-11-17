@@ -28,7 +28,7 @@ public class Main {
         System.out.println(sum);
 
         int minValueIndex = 0;
-        for (int i = 0; i < costExpenses.length - 1; i++){
+        for (int i = 0; i < costExpenses.length; i++){
             if (costExpenses[i] < costExpenses[minValueIndex]){
                 minValueIndex = i;
             }
@@ -36,7 +36,7 @@ public class Main {
         System.out.println(expensesNames[minValueIndex] + ' ' + costExpenses[minValueIndex]);
 
         int maxValueIndex = 0;
-        for (int i = 0; i < costExpenses.length - 1; i++){
+        for (int i = 0; i < costExpenses.length; i++){
             if (costExpenses[i] > costExpenses[maxValueIndex]){
                 maxValueIndex = i;
             }
