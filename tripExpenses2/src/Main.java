@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
         String purchases;
         int purchasesNumber;
         Scanner scanner = new Scanner(System.in);
@@ -10,7 +11,6 @@ public class Main {
 
         purchases = scanner.nextLine();
         purchasesNumber = Integer.parseInt(purchases);
-
         System.out.println("Enter your expenses");
 
         String[] expensesNames = new String[purchasesNumber];
@@ -18,28 +18,39 @@ public class Main {
 
         for (int i = 0; i < purchasesNumber; i++) {
             String buffer = scanner.nextLine();
-            String[][] bufferParts = new String[purchasesNumber][purchasesNumber];
-            bufferParts[i] = buffer.split(" ");
-            expensesNames[i] = bufferParts[i][0];
-            costExpenses[i] = Double.parseDouble(bufferParts[i][1]);
+            int index = buffer.lastIndexOf(" ");
+            expensesNames[i] = buffer.substring(0, index);
+            costExpenses[i] = Double.parseDouble(buffer.substring(index + 1, buffer.length()));
         }
+
+        calcSum(costExpenses);
+        getMin(expensesNames, costExpenses);
+        getMax(expensesNames, costExpenses);
+    }
+
+
+    public static void calcSum(double[] costExpenses) {
         double sum = 0;
-        for (int i = 0; i < costExpenses.length; i++) {
-            sum += costExpenses[i];
+        for (double element : costExpenses) {
+            sum += element;
         }
         System.out.println(sum);
+    }
 
+    public static void getMin(String[] expensesNames, double[] costExpenses) {
         int minValueIndex = 0;
-        for (int i = 0; i < costExpenses.length - 1; i++){
-            if (costExpenses[i] < costExpenses[minValueIndex]){
+        for (int i = 0; i < costExpenses.length; i++) {
+            if (costExpenses[i] < costExpenses[minValueIndex]) {
                 minValueIndex = i;
             }
         }
         System.out.println(expensesNames[minValueIndex] + ' ' + costExpenses[minValueIndex]);
+    }
 
+    public static void getMax(String[] expensesNames, double[] costExpenses) {
         int maxValueIndex = 0;
-        for (int i = 0; i < costExpenses.length - 1; i++){
-            if (costExpenses[i] > costExpenses[maxValueIndex]){
+        for (int i = 0; i < costExpenses.length; i++) {
+            if (costExpenses[i] > costExpenses[maxValueIndex]) {
                 maxValueIndex = i;
             }
         }
