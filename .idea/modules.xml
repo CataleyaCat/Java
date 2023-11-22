@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/IdeaProjects.iml" filepath="$PROJECT_DIR$/.idea/IdeaProjects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaLearning/JavaLearning.iml" filepath="$PROJECT_DIR$/JavaLearning/JavaLearning.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaTasks/JavaTasks.iml" filepath="$PROJECT_DIR$/JavaTasks/JavaTasks.iml" />
+      <module fileurl="file://$PROJECT_DIR$/arrays/arrays.iml" filepath="$PROJECT_DIR$/arrays/arrays.iml" />
+      <module fileurl="file://$PROJECT_DIR$/classCreation/classCreation.iml" filepath="$PROJECT_DIR$/classCreation/classCreation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/countNumber/countNumber.iml" filepath="$PROJECT_DIR$/countNumber/countNumber.iml" />
+      <module fileurl="file://$PROJECT_DIR$/maxAndMinValue/maxAndMinValue.iml" filepath="$PROJECT_DIR$/maxAndMinValue/maxAndMinValue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/minArrayElement/minArrayElement.iml" filepath="$PROJECT_DIR$/minArrayElement/minArrayElement.iml" />
+      <module fileurl="file://$PROJECT_DIR$/reversedArrayMethod/reversedArrayMethod.iml" filepath="$PROJECT_DIR$/reversedArrayMethod/reversedArrayMethod.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sunDigit/sunDigit.iml" filepath="$PROJECT_DIR$/sunDigit/sunDigit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tripExpenses/tripExpenses.iml" filepath="$PROJECT_DIR$/tripExpenses/tripExpenses.iml" />
+      <module fileurl="file://$PROJECT_DIR$/usingInputs/usingInputs.iml" filepath="$PROJECT_DIR$/usingInputs/usingInputs.iml" />
+    </modules>
+  </component>
+</project>

@@ -5,14 +5,27 @@ public class Main {
     public static void main(String[] args) {
 
         String purchases;
-        int purchasesNumber;
+        int purchasesNumber = 0;
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the number of purchases");
 
-        purchases = scanner.nextLine();
-        purchasesNumber = Integer.parseInt(purchases);
+        boolean isValidNumber = false;
+        while (!isValidNumber) {
+            if (scanner.hasNextInt()) {
+                purchases = scanner.nextLine();
+                purchasesNumber = Integer.parseInt(purchases);
+                if (purchasesNumber <= 0) {
+                    System.out.println("Enter a valid positive number");
+                } else {
+                    purchasesNumber = Integer.parseInt(purchases);
+                    isValidNumber = true;
+                }
+            } else {
+                System.out.println("Enter a valid number");
+                scanner.nextLine();
+            }
+        }
         System.out.println("Enter your expenses");
-
         String[] expensesNames = new String[purchasesNumber];
         double[] costExpenses = new double[purchasesNumber];
 
